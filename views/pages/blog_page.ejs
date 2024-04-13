@@ -1,0 +1,43 @@
+<%- include('../partials/header.ejs') %>
+
+<div class="all-card-container">
+    <h2 id="recent-post-heading">Recent Posts</h2>
+    <div class="recent-posts-container">
+        <% for (var index=0; index<3; index++){ %>
+                <div class="recent-post">
+                    <h4><%= blogArray[index]['title'] %></h4>
+                    <p>by <%= blogArray[index]['name'] %> <em><%= blogArray[index]['date'] %></em></p>
+                    <p><%= blogArray[index]['description'] %></p>
+                    <a class="read-more-link" href="/blog/<%= index %>">Read More</a>
+                </div>
+            <% } %>
+    </div>
+    <hr>
+    <h2 id="all-posts-heading">All Posts</h2>
+    <div class="all-posts-container">
+        <ol>
+            <% for (var index=3; index<blogArray.length ;index++){ %>
+                    <li class="text-post">
+                        <div class="text-post-content-wrapper">
+                            <h4><%= blogArray[index]['title'] %></h4>
+                            <p>by <%= blogArray[index]['name'] %> <em><%= blogArray[index]['date'] %></em></p>
+                            <p><%= blogArray[index]['description'] %></p>
+                            <a class="read-more-link" href="/blog/<%= index %>">Read More</a>
+                        </div>
+                    </li>        
+                <% } %>
+        </ol>
+
+        <div class="advertisement">
+            <h4>Check out my projects</h4>
+            <ul>
+                <li><a href="https://programmingenjoyer219.github.io/simon_game_pc/">Simon Game - PC</a></li>
+                <li><a href="https://programmingenjoyer219.github.io/simon_game_mobile/">Simon Game - Mobile</a></li>
+                <li><a href="https://programmingenjoyer219.github.io/dice_game_html_css/">Dicee</a></li>
+            </ul>
+            <a href="https://programmingenjoyer219.github.io/my-website/index.html"><h4>Visit my website</h4></a>
+        </div>
+    </div>
+</div>
+
+<%- include('../partials/footer.ejs') %>

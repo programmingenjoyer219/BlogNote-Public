@@ -1,0 +1,23 @@
+<%- include('../partials/header.ejs') %>
+
+<div class="hero">
+    <div class="hero-image" style="background-image: url('https://images.pexels.com/photos/942872/pexels-photo-942872.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2');">
+        <div class="hero-image-front-text">
+            <h1>Welcome To BlogNote</h1>
+            <h2>A notebook shared by everyone.</h2>
+        </div>
+    </div>
+</div>
+
+<div class="blog-card-container">
+    <% for (var i=0; i<4; i++){ %>
+    <div class="blog-card">
+        <h4><%= blogArray[i]['title'] %></h4>
+        <p><%= blogArray[i]['name'] %><em><%= blogArray[i]['date'] %></em></p>
+        <p><%= blogArray[i]['description'] %></p>
+        <a href="/blog/<%= i %>">Read More</a>
+    </div>
+    <% } %>
+</div>
+
+<%- include('../partials/footer.ejs') %>

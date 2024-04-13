@@ -1,0 +1,49 @@
+<%- include('../partials/header.ejs') %>
+
+<div id="personal-info-box">
+    <div id="about-me-box">
+        <h2>About Me</h2>
+        <p>
+            Hey there! How's it going? I'm Yuganshu, a 19-year-old guy who's diving headfirst into the exciting world of programming. Started off with C language a while back and then found my groove with python, churning out about 50 projects along the way. While I've been busy coding, I've also been dabbling in web development, even whipped up a cool website as one of my projects. Oh, and MySQL? Yep, got that under my belt too. Recently, I've been trying my hand at UI design, which has been a blast. And you know what? I've got a soft spot for Mathematics, can't get enough of it!
+        </p>
+        <p>
+            But hey, life's not all about coding and numbers, right? I'm a huge fan of badminton and football - love getting out and getting active. And when it's time to wind down, you'll probably find me immersed in manga and anime, or maybe getting my heart racing with a good horror flick. Nat Geo documentaries at midnight? You bet I'm tuned in! And let's not forget the chill vibes of Lo-Fi music that keep me going while I hit the books. Oh, and did I mention I love to draw? Been at it since I was knee-high.
+        </p>
+        <p>
+            So, that's a little peek into my world - a mix of coding adventures, sports passion, and creative pursuits. I'm all about spreading good vibes and sharing what I love.
+        </p>
+
+        <h2>Connect With Me</h2>
+        <p>
+            Stay updated on my latest projects, thoughts, and announcements by following me on social media:
+        </p>
+        <div class="icon-container">
+            <div class="social-cover"><a href="https://www.instagram.com/2109_yuganshu_9012/"><img class="social" src="/assets/instagram logo.png" alt="instagram"></a></div>
+            <div class="social-cover"><a href="https://github.com/programmingenjoyer219"><img class="social" src="/assets/github logo.png" alt="github"></a></div>
+            <div class="social-cover"><a href="https://www.linkedin.com/in/yuganshu-mohan-906b73274"><img class="social" src="/assets/linkedin logo.png" alt="linkedin"></a></div>
+        </div>
+    </div>
+    <div id="contact-me-form">
+        <h2>Get in touch</h2>
+        <div id="mail-box">
+            <form action="/submit" method="post">
+
+                <label for="name">Name</label><br><br>
+                <input class="small-entries" type="text" id="name" name="name" required><br><br>
+
+                <label for="email">Email</label><br><br>
+                <input class="small-entries" type="email" id="email" name="email" required><br><br>
+
+                <label for="subject">Subject</label><br><br>
+                <input class="small-entries" type="text" id="subject" name="subject" required><br><br>
+
+                <label for="message">Message</label><br><br>
+                <textarea name="message" id="message" cols="30" rows="10" required></textarea><br><br>
+
+                <input id="send-button" type="submit" value="Send">
+              </form>
+        </div>
+    </div>
+</div>
+
+<%- include('../partials/footer.ejs') %>

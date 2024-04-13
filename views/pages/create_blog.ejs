@@ -1,0 +1,38 @@
+<%- include('../partials/header.ejs') %>
+
+<% var today = new Date(); %>
+<% var date = `${today.getDate()}/` + `${today.getMonth() + 1}/` + `${today.getFullYear()}`; %>
+
+<div class="create-blog-form-container">
+    <form id="create-blog-form" action="/create_blog" method="post">
+        <!-- Name -->
+        <label for="Name">Name</label><br><br>
+        <input class="small-entries" type="text" id="name" name="name" required><br><br>
+        <!-- Passkey -->
+        <label for="Passkey">Passkey</label><br><br>
+        <input class="small-entries" type="text" id="passkey" name="passkey" required><br><br>
+        <!-- Date -->
+        <label for="Date">Date</label><br><br>
+        <input class="small-entries" type="text" id="date" name="date" value="<%= date %>" required><br><br>
+        <!-- Title -->
+        <label for="title">Title</label><br><br>
+        <input class="small-entries" type="text" id="title" name="title" required><br><br>
+        <!-- Description -->
+        <label for="description">Description</label><br>
+        <em style="color: #2e353b; font-weight: normal; margin: 0px;">↪️One liner</em><br>
+        <input class="small-entries" type="text" id="description" name="description" required><br><br>
+        <!-- Upload image box -->
+        <label for="image">Image URL</label><br>
+        <em style="color: #2e353b; font-weight: normal; margin: 0px;">↪️Use horizontal images for better experience</em>
+        <em style="color: #2e353b; font-weight: normal; margin: 0px;">↪️Visit <a href="https://www.pexels.com">pexels.com</a> for free stock images</em>
+        <em style="color: #2e353b; font-weight: normal; margin: 0px;">↪️URL should end with .svg, .jpg or .png extension</em><br>
+        <input class="small-entries" type="url" id="image" name="image" required><br><br>
+        <!-- Content -->
+        <label for="content">Content</label><br><br>
+        <textarea name="content" id="content" cols="30" rows="10" required></textarea><br><br>
+        <!-- Sumbit Button -->
+        <input class="button-submit" type="submit" value="Submit">
+    </form>
+</div>
+
+<%- include('../partials/footer.ejs') %>
